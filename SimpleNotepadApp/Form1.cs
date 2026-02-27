@@ -16,6 +16,16 @@ public partial class Form1 : Form
         this.Text = "Meu Bloco de Notas C#";
         this.Size = new Size(800, 600);
 
+        // --- ADICIONANDO O ÍCONE NA JANELA ---
+        try 
+        {
+            this.Icon = new Icon("app_icon.ico");
+        }
+        catch 
+        {
+            // Se o arquivo não existir, ele apenas ignora e usa o ícone padrão
+        }
+
         // 1. Barra de Status
         StatusStrip barraStatus = new StatusStrip();
         labelStatus = new ToolStripStatusLabel();
